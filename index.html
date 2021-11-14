@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommerceZone</title>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+      <link rel="icon" href="https://media-exp1.licdn.com/dms/image/C4D0BAQE6Q4UdH4H8_g/company-logo_200_200/0/1540483990662?e=2159024400&v=beta&t=ibPVIAMuqP5VcBuMigqbTpynM327SkCnbGV5q5CR0C4" type="im/x-icon">
+      <script src='https://code.jquery.com/jquery-3.6.0.min.js' type='text/javascript'></script>
+      <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+      <meta name="theme-color" content="#ff0000"/>
+      <link rel="manifest" href="manifest.json">
+
+    <style>
+    /* ######## Back to Top CSS ################ */
+    #button {
+      display: inline-block;
+      background: #ffffff70;
+      width: 38px;
+      height: 38px;
+      text-align: center;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 2%;
+      right: 3%;
+      transition: all .5s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 111;
+    }
+
+    #button::after {
+      content: "\f077";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 2em;
+      line-height: 35px;
+      color: #fff;
+    }
+
+    #button:hover {
+      cursor: pointer;
+      background: #00000050;
+    }
+
+    #button:active {
+      background-color: #555;
+    }
+
+    #button.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ######## Share Button CSS ############# */
+    .share-widget {
+      color: #fff;
+      background: #ffffff70;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      z-index: 111;
+      position: fixed;
+      bottom: 2%;
+      left: 3%;
+      border: none;
+      border-radius: 100px;
+      transition: background-color .5s;
+      cursor: pointer;
+    }
+
+    .share-widget::after {
+      content: "\f064";
+      font-family: FontAwesome;
+    }
+
+    .share-widget:hover {
+      background: #00000050;
+    }
+
+</style>
+<body>
+
+  <!-- Back to top button -->
+  <a id='button' title='Back to Top'></a>
+
+  <!-- Share button -->
+  <button class='share-widget' title='Share Now'></button>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="/">Commerce<span>Zone</span></a></div>
+            <ul class="menu">
+                <li><a href="/" class="menu-btn" id="homepage" data-link>Home</a></li>
+                <li><a href="/11th" class="menu-btn" id="elpage" data-link>11th Commerce</a></li>
+                <li><a href="/12th" class="menu-btn" id="twpage" data-link>12th Commerce</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+
+ 
+    <div id="app"></div>
+    
+
+        <!-- footer section start -->
+        <footer>
+            <span>Created By CommerceZone | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+        </footer>
+        <script type="module" src="js/index.js"></script>
+        <script src="script.js"></script>
+        <script>
+            var btn = $('#button');
+        
+            $(window).scroll(function () {
+              if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+              }
+              else {
+                btn.removeClass('show');
+              }
+            });
+        
+            btn.on('click', function (e) {
+              e.preventDefault();
+              $('html, body').animate({ scrollTop: 0 }, '300');
+            });
+          </script>
+          <script>
+            const shareButton = document.querySelector('.share-widget');
+            shareButton.addEventListener('click', event => {
+              if (navigator.share) {
+                navigator.share({
+                  title: document.title,
+                  url: window.location.href
+                })
+                  .then(() => {
+                    console.log('Thanks for sharing!');
+                  })
+                  .catch(console.error);
+              }
+            });
+          </script>
+      <script>
+        //if browser support service worker
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('sw.js');
+        };
+      </script>
+
+
+
+</body>
+</html>
