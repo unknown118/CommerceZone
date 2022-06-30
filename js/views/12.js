@@ -177,6 +177,29 @@ export default class extends AbstractView {
        <a href="https://drive.google.com/file/d/1EVvZdatL2G0IslRBZ6C7FOP_EJW9gD6j/view?usp=drivesdk" target="_blank" style="float: right;"> <button class="button button1">Buy Now</button></a>
        
    </div>
+  
+   <div style="overflow: hidden;">
+     <hr color="orange"/>
+       <p style="float: left;" ><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Advance Web design   
+   </font>  </p>  
+       <a href="https://drive.google.com/file/d/1wqqLEkiY9yUequxQFeHgpYnUg3TFUUNL/view" target="_blank" style="float: right;"> <button class="button button1">Buy Now</button></a>
+   
+   </div>
+       <div style="overflow: hidden;">
+     <hr color="orange" width="98%" style="float: right;"/>
+       <p style="float: left;" ><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ch 2 Introduction to SEO   
+   </font>  </p>  
+       <a href="https://drive.google.com/file/d/1x1wSkUDc38oFeC0EKLt4IC8jIp28kAbm/view?usp=sharing" target="_blank" style="float: right;"> <button class="button button1">Buy Now</button></a>
+   
+   </div>
+   <div style="overflow: hidden;">
+     <hr color="orange" width="98%" style="float: right;"/>
+       <p style="float: left;" ><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  E-commerce and E-governance   
+   </font>  </p>  
+       <a href="https://drive.google.com/file/d/1x0QqKFiUSmNaZlbxaAHj7ZQvxlAgPsa9/view?usp=sharing" target="_blank" style="float: right;"> <button class="button button1">Buy Now</button></a>
+   </div>
+   <hr color="orange" width="98%" style="float: right;"/>
+  
                   </div>
                </div>
            </div>
